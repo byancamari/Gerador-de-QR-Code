@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+   background: linear-gradient(90deg,#34baab 35%,#c4c8c5 );
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.container{
+    height: 260px;
+    background-color:#f8f8f8;
+    border-radius:10px;
+    margin: 20%;
+    padding: 16px 25px;
+    transition: heigth 0.5s ease;
+}
+.container.active{
+height: 530px;
+}
+header h1{
+    text-align: center;
+    font-weight: 900;
+    font-size: 28px ;
+}
+header p{
+color: #000000;
+font-size: 15px;
+text-align: center;
+margin-top: 10px;
+}
+.container .form{
+    padding: 20px 0 25px;
+}
+.container :where(input,button){  
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 50px;
+}
+.form button{
+    color: #fff;
+    background: #000000;
+    margin-top: 20px;
+    font-size: 17px;
+    cursor: pointer;
+    transition:  all 0.5 ease;
+}
+.form button:hover{
+    background: #34baab;
+}
+
+.container .qr-code{
+    text-align: center;
+    display: fslex;
+    align-items: center;
+    justify-content: center;
+    padding: 33px 0;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.qr-code .img{
+    width: 220px;
+    height: auto;
+}
+.container.active .qr-code{
+    opacity:1;
+    pointer-events: auto;
+    transition: opacity 0.5s ease;
+}
